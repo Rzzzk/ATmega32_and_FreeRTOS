@@ -1,0 +1,56 @@
+/*
+ * main.c
+ *
+ *  Created on: Sep 8, 2023
+ *      Author: REZK
+ */
+
+
+/*
+ * main.c
+ *
+ *  Created on: Jan 28, 2023
+ *      Author: REZK
+ */
+
+
+#include"stdTypes.h"
+#include"errorStates.h"
+
+#include"DIO_int.h"
+
+#include "FreeRTOS.h"
+#include "task.h"
+
+
+TaskHandle_t Task1_hn = NULL;
+
+void Task_1(void * pvParameters)
+{
+	while(1)
+	{
+		DIO_enuTogPin(DIO_u8PORTA, DIO_u8PIN0);
+
+		vTaskDelay(10);
+	}
+}
+
+
+
+
+
+int main(void)
+{
+
+	DIO_enuInit();
+
+	xTaskCreate(Task_1, "ToggleLed", 10, (void *) 0 , 2, Task1_hn);
+
+	/* Start Scheduler */
+	vTaskStartScheduler();
+
+	while(1)
+	{
+
+	}
+}

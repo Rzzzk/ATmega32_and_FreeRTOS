@@ -1,0 +1,64 @@
+/*
+ * main.c
+ *
+ *  Created on: Sep 8, 2023
+ *      Author: REZK
+ */
+
+
+/*
+ * main.c
+ *
+ *  Created on: Jan 28, 2023
+ *      Author: REZK
+ */
+
+
+#include"stdTypes.h"
+#include"errorStates.h"
+
+#include"DIO_int.h"
+
+#include "FreeRTOS.h"
+#include "task.h"
+
+
+TaskHandle_t Task1_hn = NULL;
+
+void Task_1(void * pvParameters)
+{
+	while(1)
+	{
+		DIO_enuSetPinValue(DIO_u8PORTA, DIO_u8PIN0 , DIO_u8PIN_HIGH);
+		vTaskDelay(100);
+	}
+}
+
+
+
+BaseType_t xReturned;
+
+int main(void)
+{
+
+	DIO_enuInit();
+
+	xReturned = xTaskCreate(Task_1, "Tog", 10, (void *) 0 , 2, &Task1_hn);
+
+	if(xReturned == pdPASS)
+	{
+		DIO_enuSetPinValue(DIO_u8PORTA, DIO_u8PIN3 , DIO_u8PIN_HIGH);
+	}
+	else
+	{
+		DIO_enuSetPinValue(DIO_u8PORTA, DIO_u8PIN7 , DIO_u8PIN_HIGH);
+	}
+
+	/* Start Scheduler */
+	vTaskStartScheduler();
+
+	while(1)
+	{
+
+	}
+}

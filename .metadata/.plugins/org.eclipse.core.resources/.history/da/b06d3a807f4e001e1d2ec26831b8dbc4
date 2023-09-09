@@ -1,0 +1,54 @@
+/*
+ * main.c
+ *
+ *  Created on: Sep 8, 2023
+ *      Author: REZK
+ */
+
+
+/*
+ * main.c
+ *
+ *  Created on: Jan 28, 2023
+ *      Author: REZK
+ */
+
+
+#include"stdTypes.h"
+#include"errorStates.h"
+
+#include"DIO_int.h"
+
+#include "FreeRTOS.h"
+#include "task.h"
+
+
+
+
+void Task_1(void)
+{
+	while(1)
+	{
+		DIO_enuTogPin(DIO_u8PORTA, DIO_u8PIN0);
+
+		vTaskDelay(1000);
+	}
+}
+
+
+
+
+
+int main(void)
+{
+
+	DIO_enuInit();
+
+	/* Start Scheduler */
+	vTaskStartScheduler();
+
+	while(1)
+	{
+
+	}
+}

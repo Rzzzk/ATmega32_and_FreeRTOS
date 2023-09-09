@@ -1,0 +1,34 @@
+11:30:12 **** Incremental Build of configuration Debug for project 001_Hello_FreeRTOS ****
+make all 
+Building file: ../src/main.c
+Invoking: AVR Compiler
+avr-gcc -I"D:\COURCES\Developping Area\AVR\FreeRTOS\001_Hello_FreeRTOS\FreeRTOS" -I"D:\COURCES\Developping Area\AVR\FreeRTOS\001_Hello_FreeRTOS\Drivers\include" -I"D:\COURCES\Developping Area\AVR\FreeRTOS\001_Hello_FreeRTOS\LIB" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: 001_Hello_FreeRTOS.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,001_Hello_FreeRTOS.map -mmcu=atmega16 -o "001_Hello_FreeRTOS.elf"  ./src/main.o  ./FreeRTOS/croutine.o ./FreeRTOS/event_groups.o ./FreeRTOS/heap_1.o ./FreeRTOS/list.o ./FreeRTOS/port.o ./FreeRTOS/queue.o ./FreeRTOS/stream_buffer.o ./FreeRTOS/tasks.o ./FreeRTOS/timers.o  ./Drivers/src/DIO_prog.o ./Drivers/src/GIE_prog.o ./Drivers/src/Timers_prog.o  ./Drivers/include/Timers_config.o   
+Finished building target: 001_Hello_FreeRTOS.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S 001_Hello_FreeRTOS.elf  >"001_Hello_FreeRTOS.lss"
+Finished building: 001_Hello_FreeRTOS.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 001_Hello_FreeRTOS.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:   28498 bytes (173.9% Full)
+(.text + .data + .bootloader)
+
+Data:       1641 bytes (160.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+11:30:13 Build Finished. 0 errors, 0 warnings. (took 714ms)
+

@@ -1,0 +1,69 @@
+/*
+ * main.c
+ *
+ *  Created on: Sep 8, 2023
+ *      Author: REZK
+ */
+
+
+/*
+ * main.c
+ *
+ *  Created on: Jan 28, 2023
+ *      Author: REZK
+ */
+
+
+#include"stdTypes.h"
+#include"errorStates.h"
+
+#include"DIO_int.h"
+#include "GIE_int.h"
+#include "Timers_int.h"
+
+#include "FreeRTOS.h"
+#include "task.h"
+
+
+TaskHandle_t Task1_hn = NULL;
+
+void Task_1(void * pvParameters)
+{
+	while(1)
+	{
+		DIO_enuTogPin(DIO_u8PORTA, DIO_u8PIN0);
+		vTaskDelay(100);
+	}
+}
+
+void vApplicationTickHook( void )
+{
+	DIO_enuSetPinValue(DIO_u8PORTA, DIO_u8PIN7 , DIO_u8PIN_HIGH);
+}
+
+BaseType_t xReturned;
+extern Timer1_t Timer1_strConfig ;
+int main(void)
+{
+
+	DIO_enuInit();
+	GIE_enuEnable();
+	Timer1_enuInit(&Timer1_strConfig);
+	Timer1_enuCTCA_INT_Enable();
+
+	xReturned = xTaskCreate(Task_1, "Tog", 150, (void *) 0 , 2 , &Task1_hn);
+
+	if(xReturned == pdPASS)
+	{
+		DIO_enuSetPinValue(DIO_u8PORTA, DIO_u8PIN3 , DIO_u8PIN_HIGH);
+	}
+	else
+	{
+		DIO_enuSetPinValue(DIO_u8PORTA, DIO_u8PIN7 , DIO_u8PIN_HIGH);
+	}
+
+	/* Start Scheduler */
+	vTaskStartScheduler();
+
+	while(1);
+}

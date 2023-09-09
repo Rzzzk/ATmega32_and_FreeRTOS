@@ -1,0 +1,966 @@
+Archive member included because of file (symbol)
+
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                              ./FreeRTOS/queue.o (__udivmodhi4)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o (exit)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                              ./src/main.o (__do_copy_data)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                              ./src/main.o (__do_clear_bss)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memcpy.o)
+                              ./FreeRTOS/queue.o (memcpy)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memset.o)
+                              ./FreeRTOS/stream_buffer.o (memset)
+
+Allocating common symbols
+Common symbol       size              file
+
+xReturned           0x1               ./src/main.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+LOAD ./src/main.o
+LOAD ./FreeRTOS/croutine.o
+LOAD ./FreeRTOS/event_groups.o
+LOAD ./FreeRTOS/heap_1.o
+LOAD ./FreeRTOS/list.o
+LOAD ./FreeRTOS/port.o
+LOAD ./FreeRTOS/queue.o
+LOAD ./FreeRTOS/stream_buffer.o
+LOAD ./FreeRTOS/tasks.o
+LOAD ./FreeRTOS/timers.o
+LOAD ./Drivers/src/DIO_prog.o
+LOAD ./Drivers/src/GIE_prog.o
+LOAD ./Drivers/src/Timers_prog.o
+LOAD ./Drivers/include/Timers_config.o
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000     0x6f34
+ *(.vectors)
+ .vectors       0x00000000       0x54 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+                0x00000054                . = ALIGN (0x2)
+                0x00000054                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x00000054        0x0 linker stubs
+ *(.trampolines*)
+                0x00000054                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x00000054                __ctors_start = .
+ *(.ctors)
+                0x00000054                __ctors_end = .
+                0x00000054                __dtors_start = .
+ *(.dtors)
+                0x00000054                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x00000054        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+                0x00000054                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x00000054        0xc c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x00000060       0x16 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                0x00000060                __do_copy_data
+ .init4         0x00000076       0x10 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x00000076                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00000086        0x8 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+ *(.init9)
+ *(.text)
+ .text          0x0000008e        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+                0x0000008e                __vector_1
+                0x0000008e                __vector_12
+                0x0000008e                __bad_interrupt
+                0x0000008e                __vector_6
+                0x0000008e                __vector_3
+                0x0000008e                __vector_13
+                0x0000008e                __vector_17
+                0x0000008e                __vector_19
+                0x0000008e                __vector_5
+                0x0000008e                __vector_4
+                0x0000008e                __vector_2
+                0x0000008e                __vector_15
+                0x0000008e                __vector_14
+                0x0000008e                __vector_16
+                0x0000008e                __vector_18
+                0x0000008e                __vector_20
+ .text          0x00000092        0x0 ./src/main.o
+ .text          0x00000092        0x0 ./FreeRTOS/croutine.o
+ .text          0x00000092        0x0 ./FreeRTOS/event_groups.o
+ .text          0x00000092        0x0 ./FreeRTOS/heap_1.o
+ .text          0x00000092        0x0 ./FreeRTOS/list.o
+ .text          0x00000092        0x0 ./FreeRTOS/port.o
+ .text          0x00000092        0x0 ./FreeRTOS/queue.o
+ .text          0x00000092        0x0 ./FreeRTOS/stream_buffer.o
+ .text          0x00000092        0x0 ./FreeRTOS/tasks.o
+ .text          0x00000092        0x0 ./FreeRTOS/timers.o
+ .text          0x00000092        0x0 ./Drivers/src/DIO_prog.o
+ .text          0x00000092        0x0 ./Drivers/src/GIE_prog.o
+ .text          0x00000092        0x0 ./Drivers/src/Timers_prog.o
+ .text          0x00000092        0x0 ./Drivers/include/Timers_config.o
+ .text          0x00000092        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .text          0x00000092        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text          0x00000092        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text          0x00000092        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text          0x00000092        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memcpy.o)
+ .text          0x00000092        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memset.o)
+                0x00000092                . = ALIGN (0x2)
+ *(.text.*)
+ .text.Task_1   0x00000092       0x20 ./src/main.o
+                0x00000092                Task_1
+ .text.vApplicationTickHook
+                0x000000b2       0x22 ./src/main.o
+                0x000000b2                vApplicationTickHook
+ .text.main     0x000000d4       0x50 ./src/main.o
+                0x000000d4                main
+ .text.xEventGroupCreate
+                0x00000124       0x3e ./FreeRTOS/event_groups.o
+                0x00000124                xEventGroupCreate
+ .text.xEventGroupSync
+                0x00000162      0x172 ./FreeRTOS/event_groups.o
+                0x00000162                xEventGroupSync
+ .text.xEventGroupWaitBits
+                0x000002d4      0x18c ./FreeRTOS/event_groups.o
+                0x000002d4                xEventGroupWaitBits
+ .text.xEventGroupClearBits
+                0x00000460       0x6c ./FreeRTOS/event_groups.o
+                0x00000460                xEventGroupClearBits
+ .text.xEventGroupGetBitsFromISR
+                0x000004cc       0x44 ./FreeRTOS/event_groups.o
+                0x000004cc                xEventGroupGetBitsFromISR
+ .text.xEventGroupSetBits
+                0x00000510      0x164 ./FreeRTOS/event_groups.o
+                0x00000510                xEventGroupSetBits
+ .text.vEventGroupDelete
+                0x00000674       0x62 ./FreeRTOS/event_groups.o
+                0x00000674                vEventGroupDelete
+ .text.vEventGroupSetBitsCallback
+                0x000006d6       0x3a ./FreeRTOS/event_groups.o
+                0x000006d6                vEventGroupSetBitsCallback
+ .text.vEventGroupClearBitsCallback
+                0x00000710       0x3a ./FreeRTOS/event_groups.o
+                0x00000710                vEventGroupClearBitsCallback
+ .text.prvTestWaitCondition
+                0x0000074a       0x64 ./FreeRTOS/event_groups.o
+ .text.pvPortMalloc
+                0x000007ae       0xb4 ./FreeRTOS/heap_1.o
+                0x000007ae                pvPortMalloc
+ .text.vPortFree
+                0x00000862       0x18 ./FreeRTOS/heap_1.o
+                0x00000862                vPortFree
+ .text.vPortInitialiseBlocks
+                0x0000087a       0x16 ./FreeRTOS/heap_1.o
+                0x0000087a                vPortInitialiseBlocks
+ .text.xPortGetFreeHeapSize
+                0x00000890       0x1e ./FreeRTOS/heap_1.o
+                0x00000890                xPortGetFreeHeapSize
+ .text.vListInitialise
+                0x000008ae       0x54 ./FreeRTOS/list.o
+                0x000008ae                vListInitialise
+ .text.vListInitialiseItem
+                0x00000902       0x20 ./FreeRTOS/list.o
+                0x00000902                vListInitialiseItem
+ .text.vListInsertEnd
+                0x00000922       0x88 ./FreeRTOS/list.o
+                0x00000922                vListInsertEnd
+ .text.vListInsert
+                0x000009aa       0xd8 ./FreeRTOS/list.o
+                0x000009aa                vListInsert
+ .text.uxListRemove
+                0x00000a82       0x98 ./FreeRTOS/list.o
+                0x00000a82                uxListRemove
+ .text.pxPortInitialiseStack
+                0x00000b1a      0x306 ./FreeRTOS/port.o
+                0x00000b1a                pxPortInitialiseStack
+ .text.xPortStartScheduler
+                0x00000e20       0x6a ./FreeRTOS/port.o
+                0x00000e20                xPortStartScheduler
+ .text.setupTimer1Interrupt
+                0x00000e8a       0x34 ./FreeRTOS/port.o
+                0x00000e8a                setupTimer1Interrupt
+ .text.vPortEndScheduler
+                0x00000ebe        0xe ./FreeRTOS/port.o
+                0x00000ebe                vPortEndScheduler
+ .text.vPortYield
+                0x00000ecc       0xb2 ./FreeRTOS/port.o
+                0x00000ecc                vPortYield
+ .text.vPortYieldFromTick
+                0x00000f7e       0xba ./FreeRTOS/port.o
+                0x00000f7e                vPortYieldFromTick
+ .text.__vector_7
+                0x00001038       0x54 ./FreeRTOS/port.o
+                0x00001038                __vector_7
+ .text.xQueueGenericReset
+                0x0000108c      0x14e ./FreeRTOS/queue.o
+                0x0000108c                xQueueGenericReset
+ .text.xQueueGenericCreate
+                0x000011da       0xe8 ./FreeRTOS/queue.o
+                0x000011da                xQueueGenericCreate
+ .text.prvInitialiseNewQueue
+                0x000012c2       0x76 ./FreeRTOS/queue.o
+ .text.xQueueGenericSend
+                0x00001338      0x144 ./FreeRTOS/queue.o
+                0x00001338                xQueueGenericSend
+ .text.xQueueGenericSendFromISR
+                0x0000147c       0xb8 ./FreeRTOS/queue.o
+                0x0000147c                xQueueGenericSendFromISR
+ .text.xQueueGiveFromISR
+                0x00001534       0xa2 ./FreeRTOS/queue.o
+                0x00001534                xQueueGiveFromISR
+ .text.xQueueReceive
+                0x000015d6      0x14e ./FreeRTOS/queue.o
+                0x000015d6                xQueueReceive
+ .text.xQueueSemaphoreTake
+                0x00001724      0x13c ./FreeRTOS/queue.o
+                0x00001724                xQueueSemaphoreTake
+ .text.xQueuePeek
+                0x00001860      0x15c ./FreeRTOS/queue.o
+                0x00001860                xQueuePeek
+ .text.xQueueReceiveFromISR
+                0x000019bc       0xae ./FreeRTOS/queue.o
+                0x000019bc                xQueueReceiveFromISR
+ .text.xQueuePeekFromISR
+                0x00001a6a       0x72 ./FreeRTOS/queue.o
+                0x00001a6a                xQueuePeekFromISR
+ .text.uxQueueMessagesWaiting
+                0x00001adc       0x30 ./FreeRTOS/queue.o
+                0x00001adc                uxQueueMessagesWaiting
+ .text.uxQueueSpacesAvailable
+                0x00001b0c       0x4a ./FreeRTOS/queue.o
+                0x00001b0c                uxQueueSpacesAvailable
+ .text.uxQueueMessagesWaitingFromISR
+                0x00001b56       0x34 ./FreeRTOS/queue.o
+                0x00001b56                uxQueueMessagesWaitingFromISR
+ .text.vQueueDelete
+                0x00001b8a       0x2e ./FreeRTOS/queue.o
+                0x00001b8a                vQueueDelete
+ .text.prvCopyDataToQueue
+                0x00001bb8      0x14c ./FreeRTOS/queue.o
+ .text.prvCopyDataFromQueue
+                0x00001d04       0x8e ./FreeRTOS/queue.o
+ .text.prvUnlockQueue
+                0x00001d92       0xa6 ./FreeRTOS/queue.o
+ .text.prvIsQueueEmpty
+                0x00001e38       0x3a ./FreeRTOS/queue.o
+ .text.xQueueIsQueueEmptyFromISR
+                0x00001e72       0x3e ./FreeRTOS/queue.o
+                0x00001e72                xQueueIsQueueEmptyFromISR
+ .text.prvIsQueueFull
+                0x00001eb0       0x40 ./FreeRTOS/queue.o
+ .text.xQueueIsQueueFullFromISR
+                0x00001ef0       0x44 ./FreeRTOS/queue.o
+                0x00001ef0                xQueueIsQueueFullFromISR
+ .text.xStreamBufferGenericCreate
+                0x00001f34       0xb2 ./FreeRTOS/stream_buffer.o
+                0x00001f34                xStreamBufferGenericCreate
+ .text.vStreamBufferDelete
+                0x00001fe6       0x52 ./FreeRTOS/stream_buffer.o
+                0x00001fe6                vStreamBufferDelete
+ .text.xStreamBufferReset
+                0x00002038       0x84 ./FreeRTOS/stream_buffer.o
+                0x00002038                xStreamBufferReset
+ .text.xStreamBufferSetTriggerLevel
+                0x000020bc       0x6e ./FreeRTOS/stream_buffer.o
+                0x000020bc                xStreamBufferSetTriggerLevel
+ .text.xStreamBufferSpacesAvailable
+                0x0000212a       0xb0 ./FreeRTOS/stream_buffer.o
+                0x0000212a                xStreamBufferSpacesAvailable
+ .text.xStreamBufferBytesAvailable
+                0x000021da       0x3c ./FreeRTOS/stream_buffer.o
+                0x000021da                xStreamBufferBytesAvailable
+ .text.xStreamBufferSend
+                0x00002216      0x1dc ./FreeRTOS/stream_buffer.o
+                0x00002216                xStreamBufferSend
+ .text.xStreamBufferSendFromISR
+                0x000023f2      0x104 ./FreeRTOS/stream_buffer.o
+                0x000023f2                xStreamBufferSendFromISR
+ .text.prvWriteMessageToBuffer
+                0x000024f6       0xee ./FreeRTOS/stream_buffer.o
+ .text.xStreamBufferReceive
+                0x000025e4      0x17c ./FreeRTOS/stream_buffer.o
+                0x000025e4                xStreamBufferReceive
+ .text.xStreamBufferNextMessageLengthBytes
+                0x00002760       0x92 ./FreeRTOS/stream_buffer.o
+                0x00002760                xStreamBufferNextMessageLengthBytes
+ .text.xStreamBufferReceiveFromISR
+                0x000027f2       0xf0 ./FreeRTOS/stream_buffer.o
+                0x000027f2                xStreamBufferReceiveFromISR
+ .text.prvReadMessageFromBuffer
+                0x000028e2       0xfc ./FreeRTOS/stream_buffer.o
+ .text.xStreamBufferIsEmpty
+                0x000029de       0x5a ./FreeRTOS/stream_buffer.o
+                0x000029de                xStreamBufferIsEmpty
+ .text.xStreamBufferIsFull
+                0x00002a38       0x70 ./FreeRTOS/stream_buffer.o
+                0x00002a38                xStreamBufferIsFull
+ .text.xStreamBufferSendCompletedFromISR
+                0x00002aa8       0x8c ./FreeRTOS/stream_buffer.o
+                0x00002aa8                xStreamBufferSendCompletedFromISR
+ .text.xStreamBufferReceiveCompletedFromISR
+                0x00002b34       0x8c ./FreeRTOS/stream_buffer.o
+                0x00002b34                xStreamBufferReceiveCompletedFromISR
+ .text.prvWriteBytesToBuffer
+                0x00002bc0      0x106 ./FreeRTOS/stream_buffer.o
+ .text.prvReadBytesFromBuffer
+                0x00002cc6      0x10a ./FreeRTOS/stream_buffer.o
+ .text.prvBytesInBuffer
+                0x00002dd0       0x74 ./FreeRTOS/stream_buffer.o
+ .text.prvInitialiseNewStreamBuffer
+                0x00002e44       0x78 ./FreeRTOS/stream_buffer.o
+ .text.xTaskCreate
+                0x00002ebc       0xf0 ./FreeRTOS/tasks.o
+                0x00002ebc                xTaskCreate
+ .text.prvInitialiseNewTask
+                0x00002fac      0x18a ./FreeRTOS/tasks.o
+ .text.prvAddNewTaskToReadyList
+                0x00003136      0x170 ./FreeRTOS/tasks.o
+ .text.vTaskDelete
+                0x000032a6       0xf6 ./FreeRTOS/tasks.o
+                0x000032a6                vTaskDelete
+ .text.vTaskDelay
+                0x0000339c       0x44 ./FreeRTOS/tasks.o
+                0x0000339c                vTaskDelay
+ .text.vTaskStartScheduler
+                0x000033e0       0x6a ./FreeRTOS/tasks.o
+                0x000033e0                vTaskStartScheduler
+ .text.vTaskEndScheduler
+                0x0000344a       0x18 ./FreeRTOS/tasks.o
+                0x0000344a                vTaskEndScheduler
+ .text.vTaskSuspendAll
+                0x00003462       0x18 ./FreeRTOS/tasks.o
+                0x00003462                vTaskSuspendAll
+ .text.xTaskResumeAll
+                0x0000347a      0x294 ./FreeRTOS/tasks.o
+                0x0000347a                xTaskResumeAll
+ .text.xTaskGetTickCount
+                0x0000370e       0x2e ./FreeRTOS/tasks.o
+                0x0000370e                xTaskGetTickCount
+ .text.xTaskGetTickCountFromISR
+                0x0000373c       0x2a ./FreeRTOS/tasks.o
+                0x0000373c                xTaskGetTickCountFromISR
+ .text.uxTaskGetNumberOfTasks
+                0x00003766       0x12 ./FreeRTOS/tasks.o
+                0x00003766                uxTaskGetNumberOfTasks
+ .text.pcTaskGetName
+                0x00003778       0x50 ./FreeRTOS/tasks.o
+                0x00003778                pcTaskGetName
+ .text.xTaskCatchUpTicks
+                0x000037c8       0x40 ./FreeRTOS/tasks.o
+                0x000037c8                xTaskCatchUpTicks
+ .text.xTaskIncrementTick
+                0x00003808      0x2ec ./FreeRTOS/tasks.o
+                0x00003808                xTaskIncrementTick
+ .text.vTaskSwitchContext
+                0x00003af4       0xda ./FreeRTOS/tasks.o
+                0x00003af4                vTaskSwitchContext
+ .text.vTaskPlaceOnEventList
+                0x00003bce       0x44 ./FreeRTOS/tasks.o
+                0x00003bce                vTaskPlaceOnEventList
+ .text.vTaskPlaceOnUnorderedEventList
+                0x00003c12       0xca ./FreeRTOS/tasks.o
+                0x00003c12                vTaskPlaceOnUnorderedEventList
+ .text.xTaskRemoveFromEventList
+                0x00003cdc      0x288 ./FreeRTOS/tasks.o
+                0x00003cdc                xTaskRemoveFromEventList
+ .text.vTaskRemoveFromUnorderedEventList
+                0x00003f64      0x21c ./FreeRTOS/tasks.o
+                0x00003f64                vTaskRemoveFromUnorderedEventList
+ .text.vTaskSetTimeOutState
+                0x00004180       0x3c ./FreeRTOS/tasks.o
+                0x00004180                vTaskSetTimeOutState
+ .text.vTaskInternalSetTimeOutState
+                0x000041bc       0x32 ./FreeRTOS/tasks.o
+                0x000041bc                vTaskInternalSetTimeOutState
+ .text.xTaskCheckForTimeOut
+                0x000041ee       0xce ./FreeRTOS/tasks.o
+                0x000041ee                xTaskCheckForTimeOut
+ .text.vTaskMissedYield
+                0x000042bc       0x14 ./FreeRTOS/tasks.o
+                0x000042bc                vTaskMissedYield
+ .text.prvIdleTask
+                0x000042d0       0x18 ./FreeRTOS/tasks.o
+ .text.prvInitialiseTaskLists
+                0x000042e8       0x7a ./FreeRTOS/tasks.o
+ .text.prvCheckTasksWaitingTermination
+                0x00004362       0x5e ./FreeRTOS/tasks.o
+ .text.prvDeleteTCB
+                0x000043c0       0x2c ./FreeRTOS/tasks.o
+ .text.prvResetNextTaskUnblockTime
+                0x000043ec       0x44 ./FreeRTOS/tasks.o
+ .text.xTaskGetCurrentTaskHandle
+                0x00004430       0x24 ./FreeRTOS/tasks.o
+                0x00004430                xTaskGetCurrentTaskHandle
+ .text.uxTaskResetEventItemValue
+                0x00004454       0x4e ./FreeRTOS/tasks.o
+                0x00004454                uxTaskResetEventItemValue
+ .text.ulTaskGenericNotifyTake
+                0x000044a2      0x16c ./FreeRTOS/tasks.o
+                0x000044a2                ulTaskGenericNotifyTake
+ .text.xTaskGenericNotifyWait
+                0x0000460e      0x1ee ./FreeRTOS/tasks.o
+                0x0000460e                xTaskGenericNotifyWait
+ .text.xTaskGenericNotify
+                0x000047fc      0x36c ./FreeRTOS/tasks.o
+                0x000047fc                xTaskGenericNotify
+ .text.xTaskGenericNotifyFromISR
+                0x00004b68      0x3fe ./FreeRTOS/tasks.o
+                0x00004b68                xTaskGenericNotifyFromISR
+ .text.vTaskGenericNotifyGiveFromISR
+                0x00004f66      0x2a0 ./FreeRTOS/tasks.o
+                0x00004f66                vTaskGenericNotifyGiveFromISR
+ .text.xTaskGenericNotifyStateClear
+                0x00005206       0x92 ./FreeRTOS/tasks.o
+                0x00005206                xTaskGenericNotifyStateClear
+ .text.ulTaskGenericNotifyValueClear
+                0x00005298      0x104 ./FreeRTOS/tasks.o
+                0x00005298                ulTaskGenericNotifyValueClear
+ .text.prvAddCurrentTaskToDelayedList
+                0x0000539c       0xcc ./FreeRTOS/tasks.o
+ .text.DIO_enuInit
+                0x00005468       0x56 ./Drivers/src/DIO_prog.o
+                0x00005468                DIO_enuInit
+ .text.DIO_enuSetPortDirection
+                0x000054be       0x9a ./Drivers/src/DIO_prog.o
+                0x000054be                DIO_enuSetPortDirection
+ .text.DIO_enuSetPortValue
+                0x00005558       0x9a ./Drivers/src/DIO_prog.o
+                0x00005558                DIO_enuSetPortValue
+ .text.DIO_enuTogPort
+                0x000055f2       0xac ./Drivers/src/DIO_prog.o
+                0x000055f2                DIO_enuTogPort
+ .text.DIO_enuGetPortValue
+                0x0000569e       0xbe ./Drivers/src/DIO_prog.o
+                0x0000569e                DIO_enuGetPortValue
+ .text.DIO_enuSetPinDirection
+                0x0000575c      0x1dc ./Drivers/src/DIO_prog.o
+                0x0000575c                DIO_enuSetPinDirection
+ .text.DIO_enuSetPinValue
+                0x00005938      0x1dc ./Drivers/src/DIO_prog.o
+                0x00005938                DIO_enuSetPinValue
+ .text.DIO_enuTogPin
+                0x00005b14      0x122 ./Drivers/src/DIO_prog.o
+                0x00005b14                DIO_enuTogPin
+ .text.DIO_enuGetPinValue
+                0x00005c36      0x138 ./Drivers/src/DIO_prog.o
+                0x00005c36                DIO_enuGetPinValue
+ .text.GIE_enuEnable
+                0x00005d6e       0x28 ./Drivers/src/GIE_prog.o
+                0x00005d6e                GIE_enuEnable
+ .text.GIE_enuDisable
+                0x00005d96       0x28 ./Drivers/src/GIE_prog.o
+                0x00005d96                GIE_enuDisable
+ .text.Timer0_enuInit
+                0x00005dbe      0x20a ./Drivers/src/Timers_prog.o
+                0x00005dbe                Timer0_enuInit
+ .text.Timer0_enuSetMode
+                0x00005fc8       0xd6 ./Drivers/src/Timers_prog.o
+                0x00005fc8                Timer0_enuSetMode
+ .text.Timer0_enuSetPrescaler
+                0x0000609e       0x42 ./Drivers/src/Timers_prog.o
+                0x0000609e                Timer0_enuSetPrescaler
+ .text.Timer0_enuSetCounter
+                0x000060e0       0x26 ./Drivers/src/Timers_prog.o
+                0x000060e0                Timer0_enuSetCounter
+ .text.Timer0_enuGetCounter
+                0x00006106       0x30 ./Drivers/src/Timers_prog.o
+                0x00006106                Timer0_enuGetCounter
+ .text.Timer0_enuSetCmpareMatch
+                0x00006136       0x26 ./Drivers/src/Timers_prog.o
+                0x00006136                Timer0_enuSetCmpareMatch
+ .text.Timer0_enuSetOC0Action
+                0x0000615c       0xbc ./Drivers/src/Timers_prog.o
+                0x0000615c                Timer0_enuSetOC0Action
+ .text.Timer0_enuOverFlowINT_Enable
+                0x00006218       0x26 ./Drivers/src/Timers_prog.o
+                0x00006218                Timer0_enuOverFlowINT_Enable
+ .text.Timer0_enuOverFlowINT_Disable
+                0x0000623e       0x26 ./Drivers/src/Timers_prog.o
+                0x0000623e                Timer0_enuOverFlowINT_Disable
+ .text.Timer0_enuCTC_INT_Enable
+                0x00006264       0x26 ./Drivers/src/Timers_prog.o
+                0x00006264                Timer0_enuCTC_INT_Enable
+ .text.Timer0_enuCTC_INT_Disable
+                0x0000628a       0x26 ./Drivers/src/Timers_prog.o
+                0x0000628a                Timer0_enuCTC_INT_Disable
+ .text.Timer0_enuCallBack
+                0x000062b0       0x76 ./Drivers/src/Timers_prog.o
+                0x000062b0                Timer0_enuCallBack
+ .text.__vector_10
+                0x00006326       0x66 ./Drivers/src/Timers_prog.o
+                0x00006326                __vector_10
+ .text.__vector_11
+                0x0000638c       0x66 ./Drivers/src/Timers_prog.o
+                0x0000638c                __vector_11
+ .text.Timer1_enuInit
+                0x000063f2      0x3cc ./Drivers/src/Timers_prog.o
+                0x000063f2                Timer1_enuInit
+ .text.Timer1_enuSetMode
+                0x000067be      0x106 ./Drivers/src/Timers_prog.o
+                0x000067be                Timer1_enuSetMode
+ .text.Timer1_enuSetPrescaler
+                0x000068c4       0x40 ./Drivers/src/Timers_prog.o
+                0x000068c4                Timer1_enuSetPrescaler
+ .text.Timer1_enuSetCounter
+                0x00006904       0x30 ./Drivers/src/Timers_prog.o
+                0x00006904                Timer1_enuSetCounter
+ .text.Timer1_enuGetCounter
+                0x00006934       0x34 ./Drivers/src/Timers_prog.o
+                0x00006934                Timer1_enuGetCounter
+ .text.Timer1_enuSetCmpareMatchRegA
+                0x00006968       0x30 ./Drivers/src/Timers_prog.o
+                0x00006968                Timer1_enuSetCmpareMatchRegA
+ .text.Timer1_enuSetCmpareMatchRegB
+                0x00006998       0x30 ./Drivers/src/Timers_prog.o
+                0x00006998                Timer1_enuSetCmpareMatchRegB
+ .text.Timer1_enuSetInputCapReg
+                0x000069c8       0x30 ./Drivers/src/Timers_prog.o
+                0x000069c8                Timer1_enuSetInputCapReg
+ .text.Timer1_enuSet_OC1A_Action
+                0x000069f8      0x13e ./Drivers/src/Timers_prog.o
+                0x000069f8                Timer1_enuSet_OC1A_Action
+ .text.Timer1_enuSet_OC1B_Action
+                0x00006b36      0x13e ./Drivers/src/Timers_prog.o
+                0x00006b36                Timer1_enuSet_OC1B_Action
+ .text.Timer1_enuOverFlowINT_Enable
+                0x00006c74       0x28 ./Drivers/src/Timers_prog.o
+                0x00006c74                Timer1_enuOverFlowINT_Enable
+ .text.Timer1_enuOverFlowINT_Disable
+                0x00006c9c       0x28 ./Drivers/src/Timers_prog.o
+                0x00006c9c                Timer1_enuOverFlowINT_Disable
+ .text.Timer1_enuCTCA_INT_Enable
+                0x00006cc4       0x26 ./Drivers/src/Timers_prog.o
+                0x00006cc4                Timer1_enuCTCA_INT_Enable
+ .text.Timer1_enuCTCB_INT_Enable
+                0x00006cea       0x28 ./Drivers/src/Timers_prog.o
+                0x00006cea                Timer1_enuCTCB_INT_Enable
+ .text.Timer1_enuCTCA_INT_Disable
+                0x00006d12       0x28 ./Drivers/src/Timers_prog.o
+                0x00006d12                Timer1_enuCTCA_INT_Disable
+ .text.Timer1_enuCTCB_INT_Disable
+                0x00006d3a       0x28 ./Drivers/src/Timers_prog.o
+                0x00006d3a                Timer1_enuCTCB_INT_Disable
+ .text.Timer1_enuCallBackOVF
+                0x00006d62       0x3e ./Drivers/src/Timers_prog.o
+                0x00006d62                Timer1_enuCallBackOVF
+ .text.Timer1_enuCallBackCTCA
+                0x00006da0       0x3e ./Drivers/src/Timers_prog.o
+                0x00006da0                Timer1_enuCallBackCTCA
+ .text.Timer1_enuCallBackCTCB
+                0x00006dde       0x3e ./Drivers/src/Timers_prog.o
+                0x00006dde                Timer1_enuCallBackCTCB
+ .text.__vector_8
+                0x00006e1c       0x66 ./Drivers/src/Timers_prog.o
+                0x00006e1c                __vector_8
+ .text.__vector_9
+                0x00006e82       0x66 ./Drivers/src/Timers_prog.o
+                0x00006e82                __vector_9
+ .text.libgcc   0x00006ee8       0x28 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                0x00006ee8                __udivmodhi4
+ .text.libgcc   0x00006f10        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00006f10        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00006f10        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text.avr-libc
+                0x00006f10       0x12 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memcpy.o)
+                0x00006f10                memcpy
+ .text.avr-libc
+                0x00006f22        0xe c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memset.o)
+                0x00006f22                memset
+                0x00006f30                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00006f30        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00006f30                exit
+                0x00006f30                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00006f30        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ *(.fini0)
+                0x00006f34                _etext = .
+
+.data           0x00800060       0x1e load address 0x00006f34
+                0x00800060                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+ .data          0x00800060        0x7 ./src/main.o
+ .data          0x00800067        0x0 ./FreeRTOS/croutine.o
+ .data          0x00800067        0x0 ./FreeRTOS/event_groups.o
+ .data          0x00800067        0x0 ./FreeRTOS/heap_1.o
+ .data          0x00800067        0x0 ./FreeRTOS/list.o
+ .data          0x00800067        0x0 ./FreeRTOS/port.o
+ .data          0x00800067        0x0 ./FreeRTOS/queue.o
+ .data          0x00800067        0x0 ./FreeRTOS/stream_buffer.o
+ .data          0x00800067        0x5 ./FreeRTOS/tasks.o
+ .data          0x0080006c        0x0 ./FreeRTOS/timers.o
+ .data          0x0080006c        0x0 ./Drivers/src/DIO_prog.o
+ .data          0x0080006c        0x0 ./Drivers/src/GIE_prog.o
+ .data          0x0080006c        0x0 ./Drivers/src/Timers_prog.o
+ .data          0x0080006c        0x0 ./Drivers/include/Timers_config.o
+ .data          0x0080006c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .data          0x0080006c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .data          0x0080006c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .data          0x0080006c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .data          0x0080006c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memcpy.o)
+ .data          0x0080006c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memset.o)
+ *(.data*)
+ .data.uxTopUsedPriority
+                0x0080006c        0x1 ./FreeRTOS/tasks.o
+                0x0080006c                uxTopUsedPriority
+ .data.Timer0_strConfig
+                0x0080006d        0x5 ./Drivers/include/Timers_config.o
+                0x0080006d                Timer0_strConfig
+ .data.Timer1_strConfig
+                0x00800072        0xc ./Drivers/include/Timers_config.o
+                0x00800072                Timer1_strConfig
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x0080007e                . = ALIGN (0x2)
+                0x0080007e                _edata = .
+                0x0080007e                PROVIDE (__data_end, .)
+
+.bss            0x0080007e      0x64b
+                0x0080007e                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x0080007e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+ .bss           0x0080007e        0x0 ./src/main.o
+ .bss           0x0080007e        0x0 ./FreeRTOS/croutine.o
+ .bss           0x0080007e        0x0 ./FreeRTOS/event_groups.o
+ .bss           0x0080007e        0x0 ./FreeRTOS/heap_1.o
+ .bss           0x0080007e        0x0 ./FreeRTOS/list.o
+ .bss           0x0080007e        0x0 ./FreeRTOS/port.o
+ .bss           0x0080007e        0x0 ./FreeRTOS/queue.o
+ .bss           0x0080007e        0x0 ./FreeRTOS/stream_buffer.o
+ .bss           0x0080007e        0x0 ./FreeRTOS/tasks.o
+ .bss           0x0080007e        0x0 ./FreeRTOS/timers.o
+ .bss           0x0080007e        0x0 ./Drivers/src/DIO_prog.o
+ .bss           0x0080007e        0x0 ./Drivers/src/GIE_prog.o
+ .bss           0x0080007e        0x0 ./Drivers/src/Timers_prog.o
+ .bss           0x0080007e        0x0 ./Drivers/include/Timers_config.o
+ .bss           0x0080007e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .bss           0x0080007e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x0080007e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .bss           0x0080007e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .bss           0x0080007e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memcpy.o)
+ .bss           0x0080007e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(memset.o)
+ *(.bss*)
+ .bss.Task1_hn  0x0080007e        0x2 ./src/main.o
+                0x0080007e                Task1_hn
+ .bss.xNextFreeByte
+                0x00800080        0x2 ./FreeRTOS/heap_1.o
+ .bss.pucAlignedHeap.1672
+                0x00800082        0x2 ./FreeRTOS/heap_1.o
+ .bss.ucHeap    0x00800084      0x5dc ./FreeRTOS/heap_1.o
+ .bss.pxCurrentTCB
+                0x00800660        0x2 ./FreeRTOS/tasks.o
+                0x00800660                pxCurrentTCB
+ .bss.uxDeletedTasksWaitingCleanUp
+                0x00800662        0x1 ./FreeRTOS/tasks.o
+ .bss.uxCurrentNumberOfTasks
+                0x00800663        0x1 ./FreeRTOS/tasks.o
+ .bss.xTickCount
+                0x00800664        0x2 ./FreeRTOS/tasks.o
+ .bss.uxTopReadyPriority
+                0x00800666        0x1 ./FreeRTOS/tasks.o
+ .bss.xSchedulerRunning
+                0x00800667        0x1 ./FreeRTOS/tasks.o
+ .bss.xPendedTicks
+                0x00800668        0x2 ./FreeRTOS/tasks.o
+ .bss.xYieldPending
+                0x0080066a        0x1 ./FreeRTOS/tasks.o
+ .bss.xNumOfOverflows
+                0x0080066b        0x1 ./FreeRTOS/tasks.o
+ .bss.uxTaskNumber
+                0x0080066c        0x1 ./FreeRTOS/tasks.o
+ .bss.xNextTaskUnblockTime
+                0x0080066d        0x2 ./FreeRTOS/tasks.o
+ .bss.xIdleTaskHandle
+                0x0080066f        0x2 ./FreeRTOS/tasks.o
+ .bss.uxSchedulerSuspended
+                0x00800671        0x1 ./FreeRTOS/tasks.o
+ .bss.pxReadyTasksLists
+                0x00800672       0x24 ./FreeRTOS/tasks.o
+ .bss.xDelayedTaskList1
+                0x00800696        0x9 ./FreeRTOS/tasks.o
+ .bss.xDelayedTaskList2
+                0x0080069f        0x9 ./FreeRTOS/tasks.o
+ .bss.pxDelayedTaskList
+                0x008006a8        0x2 ./FreeRTOS/tasks.o
+ .bss.pxOverflowDelayedTaskList
+                0x008006aa        0x2 ./FreeRTOS/tasks.o
+ .bss.xPendingReadyList
+                0x008006ac        0x9 ./FreeRTOS/tasks.o
+ .bss.xTasksWaitingTermination
+                0x008006b5        0x9 ./FreeRTOS/tasks.o
+ .bss.Timer0_pfuncTimer0OVFunc
+                0x008006be        0x2 ./Drivers/src/Timers_prog.o
+ .bss.Timer0_pfuncTimer0CTCFunc
+                0x008006c0        0x2 ./Drivers/src/Timers_prog.o
+ .bss.Timer1_pfuncTimer1_OVF_Func
+                0x008006c2        0x2 ./Drivers/src/Timers_prog.o
+ .bss.Timer1_pfuncTimer1_CTCA_Func
+                0x008006c4        0x2 ./Drivers/src/Timers_prog.o
+ .bss.Timer1_pfuncTimer1_CTCB_Func
+                0x008006c6        0x2 ./Drivers/src/Timers_prog.o
+ *(COMMON)
+ COMMON         0x008006c8        0x1 ./src/main.o
+                0x008006c8                xReturned
+                0x008006c9                PROVIDE (__bss_end, .)
+                0x00006f34                __data_load_start = LOADADDR (.data)
+                0x00006f52                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x008006c9        0x0
+                0x008006c9                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x008006c9                PROVIDE (__noinit_end, .)
+                0x008006c9                _end = .
+                0x008006c9                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab           0x00000000     0xa65c
+ *(.stab)
+ .stab          0x00000000      0x828 ./src/main.o
+ .stab          0x00000828      0x45c ./FreeRTOS/croutine.o
+                                0x648 (size before relaxing)
+ .stab          0x00000c84      0xdf8 ./FreeRTOS/event_groups.o
+                               0x1134 (size before relaxing)
+ .stab          0x00001a7c      0x30c ./FreeRTOS/heap_1.o
+                                0x7d4 (size before relaxing)
+ .stab          0x00001d88      0x474 ./FreeRTOS/list.o
+                                0x870 (size before relaxing)
+ .stab          0x000021fc      0x7c8 ./FreeRTOS/port.o
+                                0xd98 (size before relaxing)
+ .stab          0x000029c4     0x1a7c ./FreeRTOS/queue.o
+                               0x1f44 (size before relaxing)
+ .stab          0x00004440     0x15d8 ./FreeRTOS/stream_buffer.o
+                               0x1a34 (size before relaxing)
+ .stab          0x00005a18     0x2394 ./FreeRTOS/tasks.o
+                               0x288c (size before relaxing)
+ .stab          0x00007dac      0x1a4 ./FreeRTOS/timers.o
+                                0x6cc (size before relaxing)
+ .stab          0x00007f50      0xa14 ./Drivers/src/DIO_prog.o
+                                0xac8 (size before relaxing)
+ .stab          0x00008964      0x1e0 ./Drivers/src/GIE_prog.o
+                                0x294 (size before relaxing)
+ .stab          0x00008b44     0x1998 ./Drivers/src/Timers_prog.o
+                               0x1ab8 (size before relaxing)
+ .stab          0x0000a4dc      0x180 ./Drivers/include/Timers_config.o
+                                0x234 (size before relaxing)
+
+.stabstr        0x00000000     0x677d
+ *(.stabstr)
+ .stabstr       0x00000000     0x677d ./src/main.o
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(001_Hello_FreeRTOS.elf elf32-avr)
+LOAD linker stubs
